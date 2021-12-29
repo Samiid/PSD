@@ -10,3 +10,9 @@ transformers==4.15.0
 scikit-learn==1.0.2
 matplotlib==3.5.1
 matplotlib-inline==0.1.3
+sphinx==3.3.1
+sphinx_bootstrap_theme==0.8.0
+numpydoc
+nbconvert
+ipykernel
+sphinx-issues
