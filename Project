@@ -3,9 +3,29 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
+from sklearn.neighbors import KNeighborsClassifier
 
 df = pd.read_csv('Train.csv')
 dftest = pd.read_csv('Test.csv')
+df.head()
+
+print('Mising Value pada setiap atribut:')
+print(df.isna().sum())
+
+plt.subplots(figsize=(10,5))
+sns.heatmap(df.isnull(),cbar=False)
+plt.xlabel('Feature')
+plt.ylabel('Index')
+plt.title('Missing Value')
+plt.show()
+
+df['Segmentation'].value_counts()
+plt.subplots(figsize=(10,5))
+sns.countplot(df['Segmentation'].sort_values())
+plt.xlabel('Target Label')
+plt.ylabel('Jumlah')
+plt.title('Perbandingan Target Label')
+plt.show()
 
 from sklearn.preprocessing import LabelEncoder
 labelencoder=LabelEncoder()
