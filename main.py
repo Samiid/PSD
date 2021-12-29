@@ -11,12 +11,7 @@ df.head()
 print('Mising Value pada setiap atribut:')
 print(df.isna().sum())
 
-plt.subplots(figsize=(10,5))
-sns.heatmap(df.isnull(),cbar=False)
-plt.xlabel('Feature')
-plt.ylabel('Index')
-plt.title('Missing Value')
-plt.show()
+
 
 df['Segmentation'].value_counts()
 plt.subplots(figsize=(10,5))
