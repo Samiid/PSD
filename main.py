@@ -11,16 +11,6 @@ df.head()
 print('Mising Value pada setiap atribut:')
 print(df.isna().sum())
 
-
-
-df['Segmentation'].value_counts()
-plt.subplots(figsize=(10,5))
-sns.countplot(df['Segmentation'].sort_values())
-plt.xlabel('Target Label')
-plt.ylabel('Jumlah')
-plt.title('Perbandingan Target Label')
-plt.show()
-
 from sklearn.preprocessing import LabelEncoder
 labelencoder=LabelEncoder()
 df['Var_1'] = labelencoder.fit_transform(df['Var_1'])
